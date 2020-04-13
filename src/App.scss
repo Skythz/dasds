@@ -1,0 +1,317 @@
+
+
+
+// Colors
+$bg: hsl(209, 100, 97);
+$accent: hsl(209, 78, 51);
+$slightlyDarker: hsl(209, 100, 94);
+
+// Transitions
+$transition: .24s;
+
+// Container
+$container: 1200px;
+
+// Header
+$header: 1600px;
+$headerTitle: 100px;
+
+// Nav
+$navLink: #8B8B8B;
+
+
+
+
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700|Open+Sans:400&display=swap');
+
+
+
+
+
+
+
+// GLOBAL
+
+::selection{
+  background: lighten($accent, 30);
+  color: #000;
+}
+
+.section{
+  position: relative;
+  margin-top: 100px;
+}
+
+
+html{
+  font-size: 16px;
+}
+body{
+  background: $bg;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 200px;
+  color: #535f6b
+}
+
+.container{
+  max-width: $container
+}
+
+
+
+
+// TITLES
+.title{
+  color: $accent;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.subtitle{
+  font-size: 1.1rem;
+  color: $accent;
+  font-weight: 600;
+  position: relative;
+}
+
+
+
+// CARDS
+
+.card{
+  border: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,.1);
+  padding: 50px;
+  text-align: center;
+  border-radius: 20px;
+}
+.card img{
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,.25)
+}
+
+
+// HEADER
+
+#header{
+  position: relative;
+  width: 100%;
+  margin: 100px auto;
+  padding-bottom: 120px;
+  max-width: $header;
+}
+#header::before{
+  content: '';
+  height: 700px;
+  width: 700px;
+  border-radius: 50%;
+  background: $slightlyDarker;
+  position: absolute;
+  left: -600px;
+  top: -150px;
+}
+#header h1{
+  color: $accent;
+  font-size: $headerTitle;
+  font-weight: 700;
+  position: relative;
+  width: 100%;
+  max-width: $container;
+  margin: auto;
+}
+
+#header #isometric{
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 700px;
+  width: 100%;
+  z-index: -1;
+}
+
+
+
+
+#nav{
+  justify-content: center;
+  padding: 20px;
+}
+#nav .nav-item a{
+  text-align: center;
+  font-weight: 400;
+  color: $navLink;
+}
+#nav .nav-item{
+  margin: 0 25px;
+}
+#nav .nav-link.active{
+  color: $accent;
+  font-weight: 700;
+}
+
+
+
+#nav .nav-link{
+  position: relative; 
+}
+
+#nav .nav-link::before{
+  content: '';
+  background: darken($slightlyDarker, 15);
+  position: absolute;
+  left: 40%;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: .24s;
+  z-index: -1;
+}
+#nav .nav-link::after{
+  content: '';
+  background: darken($slightlyDarker, 15);
+  position: absolute;
+  right: 40%;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: .24s;
+  z-index: -1;
+}
+
+#nav .nav-link:hover::after{
+  opacity: 1;
+  right: 0;
+}
+#nav .nav-link:hover::before{
+  opacity: 1;
+  left: 0;
+}
+
+
+
+
+
+// FEATURES
+
+
+.feature{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.feature h1{
+  margin-top: .6rem;
+  line-height: 1rem;
+}
+.feature p{
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  max-width: 200px;
+  width: 100%;
+  margin: auto;
+  line-height: 1.7rem;
+}
+
+.featureimg{
+  width: 35px;
+  opacity: .7;
+  position: relative;
+  vertical-align: middle;
+}
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.imgContainer{
+  content: '';
+  width: 100px;
+  height: 100px;
+  background: #DFF0FF;
+  position: relative;
+  margin: auto;
+  border-radius: 50%;
+  white-space: nowrap;
+  transition: $transition;
+}
+
+
+.feature:hover .imgContainer{
+  background: lighten($accent, 38);;
+}
+
+
+
+// OUR COMPANIES
+
+.company .desc{
+  font-size: 1rem;
+  transition: .24s;
+  text-align: center;
+  max-width: 200px;
+  margin: 10px auto;
+  line-height: 1.7rem;
+}
+.company img{
+  width: 60px;
+  filter: grayscale(100%);
+  transition: $transition;
+  margin: auto;
+  position: relative;
+  display: block;
+}
+.company:hover img{
+  filter: grayscale(0);
+}
+.company:hover .desc{
+  color: $accent;
+}
+
+.company:nth-child(n+4){
+  margin-top: 80px;
+}
+
+
+
+
+// TESTIMONIALS
+.testimonial img{
+  width: 100px;
+}
+
+.review{
+  margin-top: 20px;
+}
+
+.testimonial{
+  padding: 0 35px;
+}
+
+.testimonial p{
+  font-family: "Open Sans", sans-serif;
+}
+
+.testimonial .name{
+  font-size: 1rem;
+  margin-top: 50px;
+}
+.testimonial .company-name{
+  color: $accent;
+  font-size: 14px;
+}
+
+
+
+
+// MEDIA QUERIES
+

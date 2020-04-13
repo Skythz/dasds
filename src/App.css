@@ -1,38 +1,239 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700|Open+Sans:400&display=swap");
+::-moz-selection {
+  background: #a9d0f4;
+  color: #000; }
+::selection {
+  background: #a9d0f4;
+  color: #000; }
+
+.section {
+  position: relative;
+  margin-top: 100px; }
+
+html {
+  font-size: 16px; }
+
+body {
+  background: aliceblue;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 200px;
+  color: #535f6b; }
+
+.container {
+  max-width: 1200px; }
+
+.title {
+  color: #2185e4;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: block;
   text-align: center;
-}
+  padding-bottom: 50px; }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.subtitle {
+  font-size: 1.1rem;
+  color: #2185e4;
+  font-weight: 600;
+  position: relative; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.card {
+  border: 0;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  text-align: center;
+  border-radius: 20px; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card img {
+  border-radius: 50%;
+  margin: auto;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); }
+
+#header {
+  position: relative;
+  width: 100%;
+  margin: 100px auto;
+  padding-bottom: 120px;
+  max-width: 1600px; }
+
+#header::before {
+  content: '';
+  height: 700px;
+  width: 700px;
+  border-radius: 50%;
+  background: #e0f0ff;
+  position: absolute;
+  left: -600px;
+  top: -150px; }
+
+#header h1 {
+  color: #2185e4;
+  font-size: 100px;
+  font-weight: 700;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto; }
+
+#header #isometric {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 700px;
+  width: 100%;
+  z-index: -1; }
+
+#nav {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  padding: 20px; }
 
-.App-link {
-  color: #61dafb;
-}
+#nav .nav-item a {
+  text-align: center;
+  font-weight: 400;
+  color: #8B8B8B; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+#nav .nav-item {
+  margin: 0 25px; }
+
+#nav .nav-link.active {
+  color: #2185e4;
+  font-weight: 700; }
+
+#nav .nav-link {
+  position: relative; }
+
+#nav .nav-link::before {
+  content: '';
+  background: #94cbff;
+  position: absolute;
+  left: 40%;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: .24s;
+  -o-transition: .24s;
+  transition: .24s;
+  z-index: -1; }
+
+#nav .nav-link::after {
+  content: '';
+  background: #94cbff;
+  position: absolute;
+  right: 40%;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: .24s;
+  -o-transition: .24s;
+  transition: .24s;
+  z-index: -1; }
+
+#nav .nav-link:hover::after {
+  opacity: 1;
+  right: 0; }
+
+#nav .nav-link:hover::before {
+  opacity: 1;
+  left: 0; }
+
+.feature {
+  text-align: center;
+  margin-top: 50px; }
+
+.feature h1 {
+  margin-top: .6rem;
+  line-height: 1rem; }
+
+.feature p {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  max-width: 200px;
+  width: 100%;
+  margin: auto;
+  line-height: 1.7rem; }
+
+.featureimg {
+  width: 35px;
+  opacity: .7;
+  position: relative;
+  vertical-align: middle; }
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
+
+.imgContainer {
+  content: '';
+  width: 100px;
+  height: 100px;
+  background: #DFF0FF;
+  position: relative;
+  margin: auto;
+  border-radius: 50%;
+  white-space: nowrap;
+  -webkit-transition: 0.24s;
+  -o-transition: 0.24s;
+  transition: 0.24s; }
+
+.feature:hover .imgContainer {
+  background: #cde4f9; }
+
+.company .desc {
+  font-size: 1rem;
+  -webkit-transition: .24s;
+  -o-transition: .24s;
+  transition: .24s;
+  text-align: center;
+  max-width: 200px;
+  margin: 10px auto;
+  line-height: 1.7rem; }
+
+.company img {
+  width: 60px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: 0.24s;
+  -o-transition: 0.24s;
+  transition: 0.24s;
+  margin: auto;
+  position: relative;
+  display: block; }
+
+.company:hover img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0); }
+
+.company:hover .desc {
+  color: #2185e4; }
+
+.company:nth-child(n+4) {
+  margin-top: 80px; }
+
+.testimonial img {
+  width: 100px; }
+
+.review {
+  margin-top: 20px; }
+
+.testimonial {
+  padding: 0 35px; }
+
+.testimonial p {
+  font-family: "Open Sans", sans-serif; }
+
+.testimonial .name {
+  font-size: 1rem;
+  margin-top: 50px; }
+
+.testimonial .company-name {
+  color: #2185e4;
+  font-size: 14px; }
